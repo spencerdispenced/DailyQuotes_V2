@@ -1,4 +1,4 @@
-# DailyQuotes Version 2
+# DailyQuotes Version 2 - https://daily-quotes-app.onrender.com
 
 ## Overview
 Sends users emails with quotes from famous authors, philosophers, actors, etc. After registering on the main page, users will receive an email to confirm their email address. Once confirmed they will start receiving one quote email daily. Users can unsubscribe at any time via the unsubscribe link at the bottom of every quote email.
@@ -10,13 +10,19 @@ Sends users emails with quotes from famous authors, philosophers, actors, etc. A
 * Templating with EJS
 * Bootstrap
 
+
 ### Backend
-* Node.JS
+* Node.js
 * Express 
 * MongoDB
+* AWS Lambda
 
 ### Testing
 Features full unit, integration, and e2e testing
 * Jest
 * Supertest
 * Cypress
+
+### Continuous Integration  / Continuous Deployment
+CI/CD pipeline implemented with GitHub Actions.
+Deployed on Render.com

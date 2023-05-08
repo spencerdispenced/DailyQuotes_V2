@@ -13,7 +13,6 @@
     "seed-users-dev": "set NODE_ENV=development&& node -r dotenv/config .\\src\\scripts\\seedUsers.js 10 dotenv_config_path=.\\configs\\.env.development",
     "seed-one-user": "set NODE_ENV=development&& node -r dotenv/config .\\src\\scripts\\seedUsers.js 1 dotenv_config_path=.\\configs\\.env.development",
     "seed-all-quotes-dev": "set NODE_ENV=development&& node -r dotenv/config .\\src\\scripts\\seedQuotes.js -all dotenv_config_path=.\\configs\\.env.development",
-    "seed-one-quote": "set NODE_ENV=development&& node -r dotenv/config .\\src\\scripts\\seedQuotes.js 1 dotenv_config_path=.\\configs\\.env.development",
     "seed-all-quotes-prod": "set NODE_ENV=production&& node -r dotenv/config .\\src\\scripts\\seedQuotes.js -all dotenv_config_path=.\\configs\\.env.production",
     "start": "set NODE_ENV=production&& node -r dotenv/config server.js dotenv_config_path=.\\configs\\.env.production",
     "dev": "set NODE_ENV=development&& nodemon -r dotenv/config server.js dotenv_config_path=.\\configs\\.env.development"
