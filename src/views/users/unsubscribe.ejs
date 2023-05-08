@@ -1,0 +1,18 @@
+<% layout('./layouts/boilerplate') %>
+
+
+<section class="features-icons text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 offset-3 justify-content-center">
+        <div class="alert alert-info" role="alert" data-cy="confirm-unsub-card">
+          <h4 id="thanks" class="alert-heading" ><%= user.name %>, are you sure you want to unsubscribe?</h4>
+          <p><%= user.email %> will be removed from the mailing list.</p>
+          <form class="d-inline" action="/unsubscribe/<%= user.uuid %>?_method=DELETE" method="post">
+              <button data-cy="unsubscribe-btn" class="btn btn-danger">Confirm Unsubscribe</button>
+          </form>
+        </div>
+    </div>
+  </div>
+</section>
+

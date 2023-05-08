@@ -1,0 +1,14 @@
+<% layout('./layouts/boilerplate') %>
+
+<section class="features-icons text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 offset-3 justify-content-center">
+        <div class="alert alert-info" role="alert" data-cy="pending-card">
+          <h4 id="thanks" class="alert-heading">Thanks <%= user.name %> for signing up!</h4>
+      
+          <p>Confirm your email: <%= user.email %> to begin receiving Daily Quotes!</p> 
+        </div>
+    </div>
+  </div>
+</section>

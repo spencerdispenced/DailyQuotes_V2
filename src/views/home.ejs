@@ -1,0 +1,165 @@
+<% layout('./layouts/boilerplate') %>
+
+
+  <!-- Masthead-->
+  <header class="masthead dqImg">
+    <div class="container position-relative">
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <div class="text-center text-white">
+            <!-- Page heading-->
+            <h1 class="page-headings">Sign up for Daily Quotes!</h1>
+            <div class="d-grid gap-2 mb-2">
+              <a class="btn btn_primary" href="#signup">Can't wait? Sign up now!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Icons Grid-->
+  <section class="features-icons text-center bg_light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex"><i class="bi bi-envelope-open-heart m-auto"></i></div>
+            <h3>Daily Emails!</h3>
+            <p class="lead mb-0">Emails lovingly delivered daily!</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex"><i class="bi bi-gift m-auto"></i></div>
+            <h3>Life Changing!*</h3>
+            <p class="lead mb-0">Like a daily gift to yourself.</p>
+            <br>
+            <div class="mb-0 small">*I mean... sure... maybe... probably not. </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <div class="features-icons-icon d-flex"><i class="bi bi-8-circle m-auto "></i></div>
+            <h3>Lots of Quotes!</h3>
+            <p class="lead mb-0">Over eight years worth of daily quotes!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Showcases-->
+  <section class="container-fluid px-0">
+    <div class="row g-0 showcase-quote align-items-center content" id="quote-1">
+      <div class="col-md-6 text-center order-2 order-md-1">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <p class="mb-0">“Women and cats will do as they please, and men and dogs should relax and get used to the
+              idea.”</p>
+            <h2> - Robert A. Heinlein</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 order-1 order-md-2">
+        <img src="assets/img/cat-book.jpg" alt="" class="img-fluid">
+      </div>
+    </div>
+
+    <div class="row g-0 showcase-quote align-items-center content" id="quote-2">
+      <div class="col-md-6 text-center order-1 order-md-2">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <p class="mb-0">“If you can't explain it to a six year old, you don't understand it yourself.”</p>
+            <h2> - Albert Einstein</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 order-2 order-md-1">
+        <img src="assets/img/open-book.jpg" alt="" class="img-fluid">
+      </div>
+    </div>
+
+    <div class="row g-0 showcase-quote align-items-center content" id="quote-3">
+      <div class="col-md-6 text-center order-2 order-md-1">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <p class="mb-0">“Outside of a dog, a book is man's best friend. Inside of a dog it's too dark to read.”</p>
+            <h2> - Groucho Marx</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 order-1 order-md-2">
+        <img src="assets/img/books-lights.jpg" alt="" class="img-fluid">
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials-->
+  <section class="testimonials text-center bg_dark">
+    <div class="container">
+      <h2 class="mb-5">What people are saying...</h2>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-3.jpg" alt="..." />
+            <h5>Rochelle M.</h5>
+            <p class="font-weight-light mb-0">"Well, Spencer made it, and he's so funny and smart, so obviously it's amazing."</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-2.jpg" alt="..." />
+            <h5>Chad S.</h5>
+            <p class="font-weight-light mb-0">"DailyQuotes is amazing! It helped me get off meth and pursue my dreams 
+              of being a stock photo model!"</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-1.jpg" alt="..." />
+            <h5>Sara F.</h5>
+            <p class="font-weight-light mb-0">"This is fantastic! Thanks so much! I literally can't contain my excitment
+              about DailyQuotes!"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Sign Up-->
+  <section class="call-to-action text-white " id="signup">
+    <div class="container position-relative">
+      <div class="row justify-content-center">
+        <div class="col-auto col-xl-6">
+          <div class="text-center">
+            <h2 class="mb-4 page-headings">Ready to get started? Sign up now!</h2>
+          </div>
+          <%- include('./partials/flash') %>
+            <div class="card shadow">
+              <div class="card-body bg-dark mb-10">
+                <!-- <h5 class="card-title">Sign Up Now !</h5> -->
+                <form action="/register" method="POST" class="validated-form" novalidate>
+                  <div class="mt-2 mb-3">
+                    <input data-cy="signup-name-input" class="form-control" type="text" id="name" name="name"
+                      placeholder="User Name" required>
+                    <div class="invalid-feedback">
+                      Enter a username
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <input data-cy="signup-email-input" class="form-control" type="email" id="email" name="email"
+                      placeholder="Email Address" required>
+                    <div class="invalid-feedback">
+                      Enter a valid email address
+                    </div>
+                  </div>
+                  <div class="d-grid gap-2 mb-2">
+                    <button class="btn btn_success" data-cy="submit-signup-form">Register</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
