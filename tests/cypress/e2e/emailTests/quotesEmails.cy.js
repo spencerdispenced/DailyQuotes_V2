@@ -1,11 +1,15 @@
-const { fakeNewUsers } = require('../../../fixtures/fakeNewUserData');
+const { fakeInput } = require('../../../fixtures/fakeNewUserData');
 const TestEmailInbox = require('../../pages/testEmailInbox');
 const UnsubscribePage = require('../../pages/unsubscribePage');
 const GoodbyePage = require('../../pages/goodbyePage');
 const ErrorPage = require('../../pages/errorPage');
 
 describe('Daily Quotes Emails', () => {
-  const fakeUser = fakeNewUsers[0];
+  const fakeUser = {
+    name: fakeInput.name + '1',
+    email: fakeInput.email.slice(0,16) + '+test1@gmail.com'
+  }
+  
 
   before(() => {
     cy.exec('npm run seed-one-user');

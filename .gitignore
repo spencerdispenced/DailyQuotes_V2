@@ -135,7 +135,6 @@ dist
 playground/
 configs/
 *.code-workspace
-/tests/fixtures
 
 # Cypress
 /tests/cypress/screenshots
