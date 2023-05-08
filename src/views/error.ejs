@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row">
       <div class="col-6 offset-3 justify-content-center">
-        <div class="alert alert-danger" role="alert" style="overflow-wrap: break-word" data-cy="error-msg">
+        <div class="alert alert-danger alert_box" role="alert" data-cy="error-msg">
           <h4 class="alert-heading">ERROR: <%= err.statusCode %>, <%= err.message %></h4>
           <%  if (process.env.NODE_ENV !== 'production') { %>
           <div style="overflow-wrap: break-word;">

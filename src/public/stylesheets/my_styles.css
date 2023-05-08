@@ -124,3 +124,7 @@ footer.footer {
     border: 0;
 }
 
+.alert_box {
+    overflow-wrap: break-word;
+}
+
