@@ -8,7 +8,7 @@
     "cypress-email": "cypress run --browser chrome --spec .\\tests\\cypress\\e2e\\emailTests",
     "test-unit": "set DOTENV_CONFIG_PATH=.\\configs\\.env.development&& jest --setupFiles dotenv/config --testTimeout=10000 --runInBand --detectOpenHandles --testPathPattern=tests/unit",
     "test-int": "set DOTENV_CONFIG_PATH=.\\configs\\.env.development&& jest --setupFiles dotenv/config --testTimeout=10000 --runInBand --detectOpenHandles --testPathPattern=tests/integration",
-    "test": "jest --testTimeout=10000  --detectOpenHandles",
+    "test": "jest --testTimeout=10000  --detectOpenHandles --setupFiles dotenv/config",
     "send-emails-dev": "set NODE_ENV=development&& node -r dotenv/config .\\src\\scripts\\sendQuoteEmails.js dotenv_config_path=.\\configs\\.env.development",
     "seed-users-dev": "set NODE_ENV=development&& node -r dotenv/config .\\src\\scripts\\seedUsers.js 10 dotenv_config_path=.\\configs\\.env.development",
     "seed-one-user": "set NODE_ENV=development&& node -r dotenv/config .\\src\\scripts\\seedUsers.js 1 dotenv_config_path=.\\configs\\.env.development",
