@@ -1,7 +1,7 @@
 require('dotenv').config({ path: './configs/.env.development' });
 const User = require('../../../src/models/user');
 const { seedFakeUsers } = require('../../testUtils/seedFakeUsers');
-const { addQuotesToDB } = require('../../../src/scripts/seeds/addQuotesToDB');
+const { seedFakeQuote } = require('../../testUtils/seedFakeQuote');
 const { sendQuoteEmail } = require('../../testUtils/quoteEmails');
 //const db = require('../../../src/utils/dbHandler');
 const fakeDB = require('../../testUtils/fakeDB');
@@ -9,7 +9,7 @@ const fakeDB = require('../../testUtils/fakeDB');
 beforeAll(async () => {
   await fakeDB.connect();
   await seedFakeUsers();
-  await addQuotesToDB(1);
+  await seedFakeQuote();
 });
 
 afterAll(async () => {
