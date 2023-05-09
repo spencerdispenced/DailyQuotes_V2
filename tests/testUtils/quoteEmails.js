@@ -48,10 +48,11 @@ module.exports.sendQuoteEmail = async () => {
               </tr>
           </tbody>
       </table>
-            <div>
-            <p data-cy="unsubscribe-msg">If you're sick of these quotes:</p> 
-                <a data-cy="unsubscribe-link" href=http://localhost:3000/status/${user.uuid}/unsubscribe>Unsubscribe</a>
-            </div>`,
+      <div>
+      <p data-cy="unsubscribe-msg">If you're sick of these quotes: <a data-cy="unsubscribe-link" href=http://localhost:3000/status/${user.uuid}/unsubscribe>Unsubscribe</a></p>
+      <br>
+      Please do not reply to this message
+      </div>`,
         })
         .catch((err) => console.log(err));
 

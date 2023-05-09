@@ -24,7 +24,7 @@ describe('Daily Quotes Emails', () => {
     it('Quote email is properly formatted', () => {
       TestEmailInbox.quoteBody().invoke('text').should('not.be.empty');
       TestEmailInbox.quoteAuthor().invoke('text').should('not.be.empty');
-      TestEmailInbox.unsubscribeMsg().should('have.text', `If you're sick of these quotes:`);
+      TestEmailInbox.unsubscribeMsg().should('have.text', `If you're sick of these quotes: Unsubscribe`);
       TestEmailInbox.unsubscribeLink().should('have.text', 'Unsubscribe');
     });
   });

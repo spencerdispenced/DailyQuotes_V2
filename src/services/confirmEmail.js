@@ -10,7 +10,7 @@ const confirmEmail = async (name, recipient, confirmationCode) => {
     html: `<div data-cy="confirm-email-body">
                <h1>Email Confirmation</h1>
                <h2>Hello ${name}</h2>
-               <p>Thank you for subscribing. Please confirm your email by clicking on the following link</p>
+               <p>Thank you for subscribing. Please confirm your email by clicking on the following link:</p>
                <a href=${process.env.URL}/confirm/${confirmationCode}>Click here</a>
              </div>`,
   });
