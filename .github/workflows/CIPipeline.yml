@@ -25,7 +25,6 @@ jobs:
       run: |
         echo "${{ secrets.ENV_FILE }}" > .env
     - run: npm test
-    name: Deploy
 
   deploy:
     needs: build
