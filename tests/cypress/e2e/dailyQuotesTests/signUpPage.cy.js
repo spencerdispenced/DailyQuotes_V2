@@ -72,7 +72,7 @@ describe('Sign up form', () => {
         .find('p')
         .should(
           'have.text',
-          'Thank you for subscribing. Please confirm your email by clicking on the following link'
+          'Thank you for subscribing. Please confirm your email by clicking on the following link:'
         );
 
       // Click confirmation link, validate Confirmed page

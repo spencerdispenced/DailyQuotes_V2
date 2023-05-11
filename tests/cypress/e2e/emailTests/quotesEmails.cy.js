@@ -4,6 +4,7 @@ const UnsubscribePage = require('../../pages/unsubscribePage');
 const GoodbyePage = require('../../pages/goodbyePage');
 const ErrorPage = require('../../pages/errorPage');
 
+
 describe('Daily Quotes Emails', () => {
   const fakeUser = {
     name: fakeInput.name + '1',
@@ -12,8 +13,11 @@ describe('Daily Quotes Emails', () => {
   
 
   before(() => {
-    cy.exec('npm run seed-one-user');
-    cy.exec('npm run send-emails-dev');
+    //cy.exec('npm run seed-one-user-dev');
+    //cy.exec('npm run send-emails-dev');
+
+    cy.exec('npm run seed-one-user-test');
+    cy.exec('npm run send-emails-test');
   });
 
   beforeEach(() => {

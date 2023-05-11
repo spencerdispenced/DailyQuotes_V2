@@ -2,14 +2,13 @@
 // Version will be ported to AWS Lambda
 
 const User = require('../../src/models/user');
-const Quote = require('../../src/models/quote');
 const { getTransporter } = require('../../src/utils/getTransporter');
 
 module.exports.sendQuoteEmail = async () => {
   try {
     const transporter = await getTransporter();
     
-    const quote = await Quote.aggregate().sample(1);
+    //const quote = await Quote.aggregate().sample(1);
     const users = await User.find({ isValid: true });
     
     const sentMsgStatuses = [];
@@ -24,14 +23,14 @@ module.exports.sendQuoteEmail = async () => {
               <tr>
                   <td style= "font-style: italic; font-size: 14px;" class="esd-block-html">
                       <div data-cy="quote-email-body">
-                          <p style= "" data-cy="quote-body">${quote[0].body}</p>
+                          <p style= "" data-cy="quote-body">"Be yourself; everyone else is already taken."</p>
                       </div>
                   </td>
               </tr>
               <tr>
                   <td style= "font-size: 14px;" class="esd-block-html">
                       <div data-cy="quote-email-body">
-                          <p style= "margin-left: 15px; margin-top: 10px;" data-cy="quote-author">- ${quote[0].author}</p>
+                          <p style= "margin-left: 15px; margin-top: 10px;" data-cy="quote-author">- Oscar Wilde</p>
                       </div>
                   </td>
               </tr>

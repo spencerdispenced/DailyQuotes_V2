@@ -1,6 +1,8 @@
 
 # Build and run unit and integration tests
-# Deplo to Render
+# Run Cypress e2e tests
+# Deploy to Render
+
 name: DailyQuotes CI
 
 on:
@@ -10,8 +12,12 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build_test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+        mongodb-version: ['6.0']
 
     steps:
     - uses: actions/checkout@v3
@@ -20,14 +26,32 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - name: 'Create env file'
+
+    - name: Start MongoDB
+      uses: supercharge/mongodb-github-action@1.8.0
+      with:
+        mongodb-version: ${{ matrix.mongodb-version }}
+
+    - name: Create env file
       run: |
         echo "${{ secrets.ENV_FILE }}" > .env
-    - run: npm test
+        
+    - name: Run unit / integration tests
+      run: |
+        npm ci
+        npm test
+        
+    - name: Create Cypress env file
+      run: |
+        echo '${{ secrets.CYPRESS_ENV_CI }}' > cypress.env.json
+        
+    - name: Cypress run
+      uses: cypress-io/github-action@v5
+      with:
+        start: npm run start-test
 
   deploy:
-    needs: build
+    needs: build_test
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to production
